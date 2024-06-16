@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocFusion</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div>
+        <img src="assets/images/logo.svg" alt="logo" />
+
+        <div>
+          <a href="pages/login.html"
+            ><button class="primary-btn btn-white">Login</button></a
+          >
+          <a href="pages/signup.html"
+            ><button class="primary-btn">Sign Up</button></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="home">
+      <div>
+        <div class="uploader-box">
+          <h1 class="uploader-title">
+            <h1>Add new files</h1>
+            <p>Max 100 files are allowed</p>
+          </h1>
+
+          <div class="upload-area">
+            <img src="assets/icons/backup.svg" alt="" />
+            <p>Drop your files here to add</p>
+            <p style="opacity: 50%">OR</p>
+            <button>Browse Files</button>
+          </div>
+
+          <p>Only .jpg, .png, .svg, .pdf and .docx files are supported</p>
+        </div>
+
+        <div class="warning-msg">
+          <img
+            src="assets/icons/alert.svg"
+            alt=""
+            style="margin-bottom: 16px"
+          />
+          <h1>Login to upload files</h1>
+          <p>No files has been uploaded yet</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
