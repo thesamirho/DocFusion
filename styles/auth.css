@@ -38,6 +38,7 @@ body {
   font-weight: bold;
   color: #212121;
   padding-left: 8px;
+  padding-bottom: 0;
 }
 
 .login-box input {
@@ -73,8 +74,12 @@ body {
   color: #0075ff;
 }
 
+.login-btn {
+  width: 100%;
+  margin-top: 16px;
+}
+
 .login-box .primary-btn {
   width: 100%;
   height: 56px;
-  margin-top: 16px;
 }

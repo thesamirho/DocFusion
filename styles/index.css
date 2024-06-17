@@ -1,11 +1,16 @@
 .home {
-  padding: 64px 150px;
+  padding: 64px;
+  display: flex;
+  justify-content: center;
 }
 
 .home > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 24px;
 }
 
 .uploader-box {
@@ -23,21 +28,27 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: #F7F8FB;
-  border: 2px dashed #0075FF40;
+  background-color: #f7f8fb !important;
+  border: 2px dashed #0075ff40;
   padding: 32px;
   border-radius: 8px;
 }
 
-.upload-area button {
+.browse-files {
   width: fit-content;
   padding: 6px 16px;
-  color: #858585;
+  color: #0075ff;
   background-color: white;
-  border: 1px solid #858585;
+  border: 1px solid #0075ff;
   font-size: 16px;
   font-weight: 600;
   border-radius: 8px;
+}
+
+.disabled {
+  color: #858585;
+  background-color: white;
+  border: 1px solid #858585;
 }
 
 .warning-msg {
