@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocFusion</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+  </head>
+  <body>
+    <nav class="navbar nav-auth">
+      <div>
+        <img src="../assets/images/logo.svg" alt="logo" />
+
+        <div>
+          <a href="home.html" class="nav-link active-link">Uploader</a>
+          <a href="billing.html" class="nav-link">Billing</a>
+          <img src="../assets/icons/profile.svg" alt="" />
+        </div>
+      </div>
+    </nav>
+
+    <div class="home">
+      <div style="justify-content: center">
+        <div class="uploader-box">
+          <h1 class="uploader-title">
+            <h1>Add new files</h1>
+            <p>Max 100 files are allowed</p>
+          </h1>
+
+          <div class="uploading-area">
+            <p>Checking 42 files...</p>
+
+            <div>
+              <div class="progressbar">
+                <div id="progressbar" class="progress"></div>
+              </div>
+              <p id="percentage" style="opacity: 50%">10%</p>
+            </div>
+
+            <button class="browse-files">Cancel</button>
+          </div>
+
+          <p>Only .jpg, .png, .svg, .pdf and .docx files are supported</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var elem = document.getElementById("progressbar");
+      var width = 1;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          window.location.replace("/pages/home-uploaded.html");
+        } else {
+          width++;
+          elem.style.width = width + "%";
+        }
+      }
+    </script>
+  </body>
+</html>
