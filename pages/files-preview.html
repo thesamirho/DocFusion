@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocFusion</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/files-preview.css" />
+  </head>
+  <body>
+    <nav class="navbar nav-auth">
+      <div>
+        <img src="../assets/images/logo.svg" alt="logo" />
+
+        <div>
+          <a id="uploader" href="home.html" class="nav-link">Uploader</a>
+          <a id="billing" href="billing.html" class="nav-link">Billing</a>
+          <img src="../assets/icons/profile.svg" alt="" />
+        </div>
+      </div>
+    </nav>
+
+    <div class="table-top">
+      <p>
+        <img src="../assets/icons/back-arrow.svg" alt="" /> Go back to uploader
+      </p>
+      <div>
+        <img src="../assets/icons/search.svg" alt="" />
+        <input type="text" placeholder="Search invoices..." />
+      </div>
+    </div>
+
+    <div style="margin: 24px 48px 48px 48px">
+      <table class="files-listing">
+        <tr>
+          <th>File</th>
+          <th>Recipient</th>
+          <th>Due Date</th>
+          <th>Item Description</th>
+          <th>Amount</th>
+        </tr>
+
+        <tr>
+          <td>Image.jpg</td>
+          <td>John Smith</td>
+          <td>10-07-2024</td>
+          <td style="font-size: 12px">
+            1. Design = $250<br />
+            2. Development = $100<br />
+            3. Maintenance = $25...
+            <!-- <div class="tooltip">
+              1. Design = $250<br />
+              2. Development = $100<br />
+              3. SEO = $200<br />
+              4. Maintenance = $25/hr<br />
+              5. Hosting = $4.87/month
+            </div> -->
+          </td>
+          <td>$875.00</td>
+        </tr>
+        <tr>
+          <td>Image.jpg</td>
+          <td>John Smith</td>
+          <td>10-07-2024</td>
+
+          <td>$875.00</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+.files-listing {
+  width: 100%;
+  background-color: white;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+}
+
+.table-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 48px;
+  margin-bottom: 0;
+}
+
+.table-top > p {
+  padding: 8px 16px;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e7e7e7;
+}
+
+.table-top > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: white;
+  border: 1px solid #e7e7e7;
+  border-radius: 12px;
+  padding: 10px 16px;
+}
+
+.table-top > div > input {
+  height: auto;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  outline-width: 0;
+}
+
+/* tooltip starts */
+
+/* tooltip ends */
