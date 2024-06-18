@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocFusion</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/billing.css" />
+  </head>
+  <body>
+    <nav class="navbar nav-auth">
+      <div>
+        <img src="../assets/images/logo.svg" alt="logo" />
+
+        <div>
+          <a id="uploader" href="home.html" class="nav-link">Uploader</a>
+          <a id="billing" href="billing.html" class="nav-link">Billing</a>
+          <img src="../assets/icons/profile.svg" alt="" />
+        </div>
+      </div>
+    </nav>
+
+    <div class="billing-box">
+      <h1>Billing Info</h1>
+
+      <div>
+        <p>Full Name</p>
+        <input type="text" placeholder="John Doe" />
+      </div>
+
+      <div>
+        <p>Credit Card Number</p>
+        <input type="number" placeholder="0000 0000 0000 0000" />
+      </div>
+
+      <div style="display: flex; justify-content: space-between; gap: 24px">
+        <div>
+          <p>Exp Date</p>
+          <input type="date" />
+        </div>
+
+        <div>
+          <p>CVV</p>
+          <input type="number" style="width: 80%" placeholder="•••" />
+        </div>
+      </div>
+
+      <div>
+        <p>Zip Code</p>
+        <input type="number" placeholder="12345" />
+      </div>
+
+      <button
+        class="primary-btn"
+        style="width: 100%; height: 56px; margin-top: 16px"
+      >
+        Confirm
+      </button>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img
+            src="../assets/images/checkmark.svg"
+            alt=""
+            style="margin-bottom: 24px"
+          />
+          <h1>Files successfully uploaded</h1>
+        </div>
+        <div class="modal-footer">
+          <button
+            class="primary-btn success-btn"
+            style="width: 100%; height: 56px"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img
+            src="../assets/images/cancel.svg"
+            alt=""
+            style="margin-bottom: 24px"
+          />
+          <h1>Files have failed to upload</h1>
+        </div>
+        <div class="modal-footer" style="display: flex; gap: 24px">
+          <button
+            class="primary-btn secondary-btn"
+            style="width: 100%; height: 56px"
+          >
+            Go Back
+          </button>
+          <button
+            class="primary-btn failure-btn"
+            style="width: 100%; height: 56px"
+          >
+            Try Again
+          </button>
+        </div>
+      </div>
+    </div> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentPath = window.location.pathname;
+        const link = document.getElementById("billing");
+        if (currentPath.includes("bill")) {
+          link.classList.add("active-link");
+        }
+      });
+
+      var modal = document.getElementById("modal");
+      var btn = document.getElementById("modal-btn");
+      var span = document.getElementsByClassName("success-btn")[0];
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

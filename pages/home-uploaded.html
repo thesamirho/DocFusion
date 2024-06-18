@@ -21,8 +21,8 @@
         <img src="../assets/images/logo.svg" alt="logo" />
 
         <div>
-          <a href="home.html" class="nav-link active-link">Uploader</a>
-          <a href="billing.html" class="nav-link">Billing</a>
+          <a id="uploader" href="home.html" class="nav-link">Uploader</a>
+          <a id="billing" href="billing.html" class="nav-link">Billing</a>
           <img src="../assets/icons/profile.svg" alt="" />
         </div>
       </div>
@@ -180,6 +180,14 @@
     </div> -->
 
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentPath = window.location.pathname;
+        const link = document.getElementById("uploader");
+        if (currentPath.includes("home")) {
+          link.classList.add("active-link");
+        }
+      });
+
       var modal = document.getElementById("modal");
       var btn = document.getElementById("modal-btn");
       var span = document.getElementsByClassName("success-btn")[0];
