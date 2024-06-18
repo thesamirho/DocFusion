@@ -37,6 +37,24 @@ a {
   color: var(--primary);
 }
 
+hr {
+  border-top: 1px solid #e7e7e7;
+  margin: 16px 0;
+}
+
+select {
+  border: 1px solid #e7e7e7;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  outline-color: #0075ff;
+}
+
+option {
+  font-size: 16px;
+}
+
 /* Scrollbar Starts */
 /* width */
 ::-webkit-scrollbar {
@@ -104,8 +122,16 @@ a {
   border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
+  box-shadow: 0px 10px 20px 0px #cbd6ff;
   transition: all 0.3s;
   cursor: pointer;
+}
+
+.secondary-btn {
+  background-color: white;
+  border: 1px solid #e7e7e7;
+  color: #858585;
+  box-shadow: none;
 }
 
 .primary-btn:hover {
@@ -117,4 +143,18 @@ a {
   background: var(--white);
   color: var(--primary);
   margin-right: 16px;
+}
+
+.success-btn {
+  background-color: #35c61e;
+  box-shadow: 0px 10px 20px 0px #dcffcb;
+}
+
+.failure-btn {
+  background-color: #ff3636;
+  box-shadow: 0px 10px 20px 0px #ffcecb;
+}
+
+.failure-btn:hover {
+  color: #ff3636;
 }

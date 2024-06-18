@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
   </head>
   <body>
     <nav class="navbar nav-auth">
@@ -28,7 +29,7 @@
     </nav>
 
     <div class="home">
-      <div>
+      <div style="align-items: flex-start">
         <div>
           <div class="uploader-box">
             <h1 class="uploader-title">
@@ -48,23 +49,151 @@
 
           <div class="download-box">
             <div>
-              <p>50 files attached</p>
-              <p>Preview in New Tab</p>
+              <p>42 files attached</p>
+              <p style="color: #0075ff; font-weight: bold; cursor: pointer">
+                Preview in New Tab
+              </p>
             </div>
             <hr />
+            <div>
+              <p style="color: #212121">
+                Download as:
+                <select name="" id="">
+                  <option value="CSV">CSV</option>
+                  <option value="PDF">PDF</option>
+                </select>
+              </p>
+              <p style="color: #0075ff; font-weight: bold; cursor: pointer">
+                <img
+                  src="../assets/icons/download.svg"
+                  alt=""
+                  style="margin-bottom: -4px"
+                />
+                Process & Download
+              </p>
+              <!-- <p>
+                <img
+                  src="../assets/icons/loading.gif"
+                  alt=""
+                  width="20px"
+                  style="margin-bottom: -4px"
+                />
+                Processing...
+              </p> -->
+            </div>
+            <p
+              style="
+                color: #858585;
+                font-size: 13px;
+                opacity: 80%;
+                padding: 16px 0;
+              "
+            >
+              Recommend CSV format for import/export and analysis, PDF for
+              reporting and printing.
+            </p>
+            <div style="gap: 24px; margin-top: 16px">
+              <button class="primary-btn secondary-btn" style="width: 100%">
+                Cancel
+              </button>
+              <button id="modal-btn" class="primary-btn" style="width: 100%">
+                Upload
+              </button>
+            </div>
           </div>
         </div>
 
-        <div class="warning-msg">
-          <img
-            src="../assets/icons/check-list.svg"
-            alt=""
-            style="margin-bottom: 16px"
-          />
-          <h1>No file has been added yet</h1>
-          <p>Add files to see the list</p>
+        <div>
+          <div class="last-uploads">
+            <div>
+              <p>&nbsp;</p>
+              <p>42 files</p>
+            </div>
+
+            <div class="files-list" style="display: block">
+              <div class="file">
+                <div>
+                  <img src="../assets/files-icons/pdf.svg" alt="icon" />
+                  <div>
+                    <p>Document.pdf</p>
+                    <p>500kb</p>
+                  </div>
+                </div>
+                <img
+                  src="../assets/icons/close.svg"
+                  alt="edit"
+                  style="cursor: pointer"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img
+            src="../assets/images/checkmark.svg"
+            alt=""
+            style="margin-bottom: 24px"
+          />
+          <h1>Files successfully uploaded</h1>
+        </div>
+        <div class="modal-footer">
+          <button
+            class="primary-btn success-btn"
+            style="width: 100%; height: 56px"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img
+            src="../assets/images/cancel.svg"
+            alt=""
+            style="margin-bottom: 24px"
+          />
+          <h1>Files have failed to upload</h1>
+        </div>
+        <div class="modal-footer" style="display: flex; gap: 24px">
+          <button
+            class="primary-btn secondary-btn"
+            style="width: 100%; height: 56px"
+          >
+            Go Back
+          </button>
+          <button
+            class="primary-btn failure-btn"
+            style="width: 100%; height: 56px"
+          >
+            Try Again
+          </button>
+        </div>
+      </div>
+    </div> -->
+
+    <script>
+      var modal = document.getElementById("modal");
+      var btn = document.getElementById("modal-btn");
+      var span = document.getElementsByClassName("success-btn")[0];
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
