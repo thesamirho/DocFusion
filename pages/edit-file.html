@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocFusion</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/edit-file.css" />
+  </head>
+  <body>
+    <nav class="navbar nav-auth">
+      <div>
+        <img src="../assets/images/logo.svg" alt="logo" />
+
+        <div>
+          <a id="uploader" href="home.html" class="nav-link">Uploader</a>
+          <a id="billing" href="billing.html" class="nav-link">Billing</a>
+          <img src="../assets/icons/profile.svg" alt="" />
+        </div>
+      </div>
+    </nav>
+
+    <div style="display: flex; align-items: center; justify-content: center">
+      <div class="edit-top">
+        <p onclick="window.location.replace('./files-preview.html')">
+          <img src="../assets/icons/back-arrow.svg" alt="" /> All files
+        </p>
+        <div>&nbsp;</div>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; gap: 24px">
+      <div class="edit-box">
+        <div class="edit-box-left">
+          <h1>Document.pdf</h1>
+          <hr />
+
+          <form action="/pages/files-preview.html" class="edit-form" id="form">
+            <div>
+              <div>
+                <label for="file-name">File Name</label><br />
+                <input type="text" name="file-name" value="Invoice " />
+              </div>
+              <div>
+                <label for="recipient">Recipient</label><br />
+                <input type="text" name="recipient" value="John Smith" />
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <label for="due-date">Due Date</label><br />
+                <input type="date" name="due-date" />
+              </div>
+              <div>
+                <label for="amount">Amount</label><br />
+                <input type="number" name="amount" value="875.00" />
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <label for="item-description">Item Description</label><br />
+                <textarea
+                  name="item-description"
+                  id=""
+                  placeholder="type here..."
+                  rows="4"
+                  cols="50"
+                  style="margin-top: 8px"
+                ></textarea>
+              </div>
+            </div>
+
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px">
+                <p>Type:</p>
+                <span>.pdf</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px">
+                <p>Size:</p>
+                <span>5.3MB</span>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              form="form"
+              value="Submit"
+              class="primary-btn"
+              style="margin-top: 48px"
+            >
+              Save Changes
+            </button>
+          </form>
+        </div>
+
+        <div class="edit-box-right">
+          <p>Preview</p>
+          <img src="../assets/images/sample-invoice.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

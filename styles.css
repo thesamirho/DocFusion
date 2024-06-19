@@ -55,7 +55,8 @@ option {
   font-size: 16px;
 }
 
-input {
+input,
+textarea {
   width: 90%;
   height: 56px;
   background-color: #f7f8fb;
@@ -66,6 +67,11 @@ input {
   outline-color: #0075ff40;
   font-size: 16px;
   border-radius: 8px;
+}
+
+textarea {
+  height: 100px;
+  padding: 20px;
 }
 
 /* Table starts */

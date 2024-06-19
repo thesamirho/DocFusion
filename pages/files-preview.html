@@ -31,7 +31,7 @@
 
     <div style="display: flex; align-items: center; justify-content: center">
       <div class="table-top">
-        <p>
+        <p onclick="window.location.replace('./home-uploaded.html')">
           <img src="../assets/icons/back-arrow.svg" alt="" /> Go back to
           uploader
         </p>
@@ -52,7 +52,7 @@
           <th>Amount</th>
         </tr>
 
-        <tr>
+        <tr id="tr">
           <td>Image.jpg</td>
           <td>John Smith</td>
           <td>10-07-2024</td>
@@ -90,5 +90,12 @@
         </tr>
       </table>
     </div>
+
+    <script>
+      var tr = document.getElementById("tr");
+      tr.onclick = function () {
+        window.location.replace("/pages/edit-file.html");
+      };
+    </script>
   </body>
 </html>

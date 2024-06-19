@@ -28,6 +28,7 @@
   background-color: white;
   border-radius: 8px;
   border: 1px solid #e7e7e7;
+  cursor: pointer;
 }
 
 .table-top > div {
