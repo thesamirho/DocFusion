@@ -1,16 +1,25 @@
+.files-listing-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .files-listing {
   width: 100%;
+  max-width: 1200px;
   background-color: white;
   border: 1px solid #e7e7e7;
   border-radius: 8px;
 }
 
 .table-top {
+  width: 100%;
+  max-width: 1200px;
+  margin: 48px;
+  margin-bottom: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 48px;
-  margin-bottom: 0;
 }
 
 .table-top > p {
@@ -40,5 +49,28 @@
 }
 
 /* tooltip starts */
+.tooltip {
+  position: relative;
+  /* display: inline-block; */
+}
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: white;
+  color: #212121;
+  border: 1px solid #e7e7e7;
+  padding: 12px 16px;
+  border-radius: 16px;
+  text-align: left;
+  position: absolute;
+  z-index: 1;
+  font-size: 14px;
+  line-height: 24px;
+  box-shadow: 0px 4px 50px 0px rgb(0, 0, 0, 0.1);
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 /* tooltip ends */

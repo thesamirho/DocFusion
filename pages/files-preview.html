@@ -29,17 +29,20 @@
       </div>
     </nav>
 
-    <div class="table-top">
-      <p>
-        <img src="../assets/icons/back-arrow.svg" alt="" /> Go back to uploader
-      </p>
-      <div>
-        <img src="../assets/icons/search.svg" alt="" />
-        <input type="text" placeholder="Search invoices..." />
+    <div style="display: flex; align-items: center; justify-content: center">
+      <div class="table-top">
+        <p>
+          <img src="../assets/icons/back-arrow.svg" alt="" /> Go back to
+          uploader
+        </p>
+        <div>
+          <img src="../assets/icons/search.svg" alt="" />
+          <input type="text" placeholder="Search invoices..." />
+        </div>
       </div>
     </div>
 
-    <div style="margin: 24px 48px 48px 48px">
+    <div class="files-listing-container">
       <table class="files-listing">
         <tr>
           <th>File</th>
@@ -53,17 +56,17 @@
           <td>Image.jpg</td>
           <td>John Smith</td>
           <td>10-07-2024</td>
-          <td style="font-size: 12px">
+          <td class="tooltip" style="font-size: 12px">
             1. Design = $250<br />
             2. Development = $100<br />
             3. Maintenance = $25...
-            <!-- <div class="tooltip">
+            <div class="tooltiptext">
               1. Design = $250<br />
               2. Development = $100<br />
               3. SEO = $200<br />
               4. Maintenance = $25/hr<br />
               5. Hosting = $4.87/month
-            </div> -->
+            </div>
           </td>
           <td>$875.00</td>
         </tr>
@@ -71,7 +74,18 @@
           <td>Image.jpg</td>
           <td>John Smith</td>
           <td>10-07-2024</td>
-
+          <td class="tooltip" style="font-size: 12px">
+            1. Design = $250<br />
+            2. Development = $100<br />
+            3. Maintenance = $25...
+            <div class="tooltiptext">
+              1. Design = $250<br />
+              2. Development = $100<br />
+              3. SEO = $200<br />
+              4. Maintenance = $25/hr<br />
+              5. Hosting = $4.87/month
+            </div>
+          </td>
           <td>$875.00</td>
         </tr>
       </table>
